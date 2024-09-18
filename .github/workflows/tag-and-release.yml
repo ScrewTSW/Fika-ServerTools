@@ -63,6 +63,12 @@ jobs:
             dotnet publish -c Release -r win-x64 /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true --self-contained true
           fi
 
+      - name: DEBUG
+        run: |
+          ls -la
+          ls -la ./bin
+          ls -la ./obj
+
       - name: Create ZIP file
         run: |
           if [ ${{ matrix.os }} == "ubuntu-latest" ]; then
