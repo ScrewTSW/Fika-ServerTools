@@ -115,7 +115,7 @@ jobs:
 
       - name: Create release
         id: create_release
-        uses: actions/create-release@v1.1.0
+        uses: Rohit-Kuinkel/create-release-node-update@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -125,7 +125,7 @@ jobs:
           prerelease: true
 
       - name: Upload Linux build
-        uses: actions/upload-release-asset@v1.0.2
+        uses: Rohit-Kuinkel/upload-release-asset-node-update@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -135,7 +135,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload Windows build
-        uses: actions/upload-release-asset@v1.0.2
+        uses: Rohit-Kuinkel/upload-release-asset-node-update@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -145,7 +145,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload source code (zip)
-        uses: actions/upload-release-asset@v1.0.2
+        uses: Rohit-Kuinkel/upload-release-asset-node-update@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -155,7 +155,7 @@ jobs:
           asset_content_type: application/zip
 
       - name: Upload source code (tar.gz)
-        uses: actions/upload-release-asset@v1.0.2
+        uses: Rohit-Kuinkel/upload-release-asset-node-update@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
